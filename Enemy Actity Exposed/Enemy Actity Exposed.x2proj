@@ -12,13 +12,18 @@ http://www.ufopaedia.org/index.php/Infiltration_(LW2)#Enemy_Strength</Descriptio
     <AssemblyName>Enemy Actity Exposed</AssemblyName>
     <RootNamespace>Enemy Actity Exposed</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Content\" />
     <Folder Include="Localization\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Localization\LW_Overhaul.int" />
+    <Content Include="Localization\LW_Overhaul.int">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ReadMe.txt" />
     <Content Include="ModPreview.jpg" />
     <Content Include="Config\XComEditor.ini" />
