@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Guid>074d05d3-30dc-4205-a524-17d3a5863e65</Guid>
+    <Guid>7a963ef0-5c9a-4fc4-96b0-f783b1080100</Guid>
     <Name>Enemy Activity Exposed</Name>
     <Description>Exposes enemy activity level as described here: 
 http://www.ufopaedia.org/index.php/Missions_(LW2)#Enemy_Activity_Level
@@ -9,16 +9,16 @@ http://www.ufopaedia.org/index.php/Missions_(LW2)#Enemy_Activity_Level
 And exposes Enemy strength as described here:
 http://www.ufopaedia.org/index.php/Infiltration_(LW2)#Enemy_Strength</Description>
     <SteamPublishID>0</SteamPublishID>
-    <AssemblyName>Enemy Actity Exposed</AssemblyName>
-    <RootNamespace>Enemy Actity Exposed</RootNamespace>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <OutputPath>bin\Debug\</OutputPath>
+    <AssemblyName>EnemyActivityExposed</AssemblyName>
+    <RootNamespace>EnemyActivityExposed</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Content\" />
     <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\EnemyActivityExposed\" />
+    <Folder Include="Src\EnemyActivityExposed\Classes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Localization\LW_Overhaul.int">
@@ -30,6 +30,10 @@ http://www.ufopaedia.org/index.php/Infiltration_(LW2)#Enemy_Strength</Descriptio
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
     <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\EnemyActivityExposed\Classes\UIMission_LWLaunchDelayedMission_Exposed.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\EnemyActivityExposed\Classes\X2DownloadableContentInfo_EnemyActivityExposed.uc" />
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>
